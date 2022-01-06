@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom'
-import './Navigation.scss'
+import { NavLink } from 'react-router-dom';
+import './Navigation.scss';
 
 export default function Navigation() {
   return (
@@ -29,5 +29,5 @@ export default function Navigation() {
         Log Out
       </NavLink>
     </nav>
-  )
+  );
 }

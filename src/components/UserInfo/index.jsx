@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { usersSelector } from '../../redux/usersReducer/selectors';
 import UserDetails from '../UserDetails';
@@ -10,6 +10,9 @@ export default function UserInfo() {
 
   return (
     <>
+      <Link to="/users/list" className={'info-back'}>
+        Back
+      </Link>
       {id ? (
         <div className={'info-container'}>
           {users &&
