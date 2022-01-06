@@ -11,7 +11,7 @@ export default function UsersListItem({ id, name, avatar, birthday, gender }) {
           <span> </span>
           <span>{name.last}</span>
         </p>
-        <img src={avatar.thumbnail} alt="avatar" />
+        <img src={avatar.medium} alt="avatar" />
         <p>Birthday: {changeDateFormat(birthday.date)}</p>
         <p>{gender}</p>
       </Link>

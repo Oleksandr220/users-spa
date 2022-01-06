@@ -1,4 +1,5 @@
 import changeDateFormat from '../../services/changeDateFormat';
+import './UserDetails.scss';
 
 export default function UserDetails({
   name,
@@ -11,13 +12,13 @@ export default function UserDetails({
 }) {
   return (
     <div className={'user-details'}>
-      <p className={'user-details'}>
+      <p>
         Name:
         <span> {name.first}</span>
         <span> </span>
         <span> {name.last}</span>
       </p>
-      <img src={avatar.large} alt="avatar" />
+      <img className={'user-details_image'} src={avatar.large} alt="avatar" />
       <p>Birthday: {changeDateFormat(birthday.date)}</p>
       <p>Gender: {gender}</p>
       <p>

@@ -1,10 +1,12 @@
 .nav {
+  margin-top: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background-color: rgb(248, 247, 245);
 }
 
 .nav-link {
+  margin-right: 30px;
   text-decoration: none;
   font-size: 16px;
   padding: 5px 10px;
@@ -16,6 +18,10 @@
 
 .nav-link:hover {
   background-color: rgb(186, 199, 173);
+}
+
+.nav-link:last-child {
+  margin-right: 0;
 }
 
 .active {

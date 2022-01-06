@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { usersSelector } from '../../redux/usersReducer/selectors';
 import UserDetails from '../UserDetails';
+import './UserInfo.scss';
 
 export default function UserInfo() {
   const { id } = useParams();
@@ -10,7 +11,7 @@ export default function UserInfo() {
   return (
     <>
       {id ? (
-        <>
+        <div className={'info-container'}>
           {users &&
             users
               .filter((user) => user.login.uuid === id)
@@ -26,9 +27,11 @@ export default function UserInfo() {
                   registered={user.registered}
                 />
               ))}
-        </>
+        </div>
       ) : (
-        <p>Select a user to see their info</p>
+        <div className={'info-container'}>
+          <h2 className={'info-warning'}>Select a user to see their info</h2>
+        </div>
       )}
     </>
   );

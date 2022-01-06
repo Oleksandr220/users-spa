@@ -1,0 +1,27 @@
+.user-details {
+  width: 30%;
+  background-color: rgba(100, 102, 140, 0.371);
+  color: rgba(28, 28, 28, 0.816);
+}
+
+.user-details_image {
+  width: 300px;
+}
+
+@media only screen and (min-width: 450px) {
+  .user-details_image {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .user-details_image {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .user-details_image {
+    width: 80%;
+  }
+}
