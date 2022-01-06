@@ -1,25 +1,20 @@
+import { Link } from 'react-router-dom';
 import './UsersListItem.scss';
+import changeDateFormat from '../../services/changeDateFormat';
 
-export default function UsersListItem({ name, avatar, birthday, gender }) {
-  const changeDateFormat = (date) => {
-    const options = {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-    };
-    return new Date(date).toLocaleString('Ru-ru', options);
-  };
-
+export default function UsersListItem({ id, name, avatar, birthday, gender }) {
   return (
     <li className={'user-wrapper'}>
-      <p>
-        <span>{name.first}</span>
-        <span> </span>
-        <span>{name.last}</span>
-      </p>
-      <img src={avatar.thumbnail} alt="avatar" />
-      <p>Birthday: {changeDateFormat(birthday.date)}</p>
-      <p>{gender}</p>
+      <Link to={`/users/info/${id}`} className={'user-info'}>
+        <p>
+          <span>{name.first}</span>
+          <span> </span>
+          <span>{name.last}</span>
+        </p>
+        <img src={avatar.thumbnail} alt="avatar" />
+        <p>Birthday: {changeDateFormat(birthday.date)}</p>
+        <p>{gender}</p>
+      </Link>
     </li>
   );
 }

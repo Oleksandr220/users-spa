@@ -22,6 +22,7 @@ export default function UsersList() {
         users.map((user) => (
           <UserListItem
             key={user.login.uuid}
+            id={user.login.uuid}
             name={user.name}
             avatar={user.picture}
             birthday={user.dob}

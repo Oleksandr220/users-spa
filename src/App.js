@@ -4,6 +4,7 @@ import LoginView from './components/LoginView';
 import HomeView from './components/HomeView';
 import LogOutView from './components/LogOutView';
 import UsersList from './components/UsersList';
+import UserInfo from './components/UserInfo';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
           <Route path="/login" index element={<LoginView />} />
           <Route path="/users" element={<HomeView />}>
             <Route path="/users/list" element={<UsersList />} />
+            <Route path="/users/info" element={<UserInfo />} />
+            <Route path="/users/info/:id" element={<UserInfo />} />
             <Route path="/users/logout" element={<LogOutView />} />
           </Route>
         </Routes>
