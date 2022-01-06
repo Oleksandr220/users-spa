@@ -1,22 +1,33 @@
-import { useState, useEffect } from 'react';
-
-import getRandomaizer from '../../services/randomazerAPI';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import UserListItem from '../UsersListItem';
+import { ADD_USERS_ASYNC } from '../../redux/usersReducer/actions';
+import { usersSelector } from '../../redux/usersReducer/selectors';
+import './UsersList.scss';
 
 export default function UsersList() {
-  const [users, setUsers] = useState([]);
-
-  const responseUsers = async function fetchRandomUsers() {
-    const result = await getRandomaizer();
-    setUsers(result);
-  };
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    responseUsers();
+    dispatch({ type: ADD_USERS_ASYNC });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const users = useSelector(usersSelector);
+
   return (
-    <ul>
-      {users && users.map((user) => <li key={user.cell}>{user.gender}</li>)}
+    <ul className={'users'}>
+      {users &&
+        users.map((user) => (
+          <UserListItem
+            key={user.login.uuid}
+            name={user.name}
+            avatar={user.picture}
+            birthday={user.dob}
+            gender={user.gender}
+          />
+        ))}
     </ul>
   );
 }

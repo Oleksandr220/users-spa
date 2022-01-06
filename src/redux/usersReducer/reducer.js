@@ -1,4 +1,4 @@
-import { ADD_USERS_ASYNC, SET_LOADING } from './actions';
+import { ADD_USERS, SET_LOADING } from './actions';
 
 const initialState = {
   users: [],
@@ -7,8 +7,8 @@ const initialState = {
 
 function reduser(state = initialState, action) {
   switch (action.type) {
-    case ADD_USERS_ASYNC:
-      return { ...state, users: [...state.users, action.data] };
+    case ADD_USERS:
+      return { ...state, users: action.data };
     case SET_LOADING:
       return { ...state, loading: action.data };
     default:

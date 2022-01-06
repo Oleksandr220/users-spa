@@ -1,9 +1,9 @@
-import Button from '../Button'
-import './LoginView.scss'
-import { useNavigate } from 'react-router-dom'
+import Button from '../Button';
+import './LoginView.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginView() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className={'home'}>
@@ -11,5 +11,5 @@ export default function LoginView() {
         Log in
       </Button>
     </div>
-  )
+  );
 }
