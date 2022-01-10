@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
 import './UsersListItem.scss';
 import changeDateFormat from '../../services/changeDateFormat';
+import { INFO_ROUTE } from '../../constants/routes';
 
-export default function UsersListItem({ id, name, avatar, birthday, gender }) {
+export default function UsersListItem({ data }) {
   return (
     <li className={'user-wrapper'}>
-      <Link to={`/users/info/${id}`} className={'user-info'}>
+      <Link to={`${INFO_ROUTE}/${data.login.uuid}`} className={'user-info'}>
         <p>
-          <span>{name.first}</span>
+          <span>{data.name.first}</span>
           <span> </span>
-          <span>{name.last}</span>
+          <span>{data.name.last}</span>
         </p>
-        <img src={avatar.medium} alt="avatar" />
-        <p>Birthday: {changeDateFormat(birthday.date)}</p>
-        <p>{gender}</p>
+        <img src={data.picture.medium} alt="avatar" />
+        <p>Birthday: {changeDateFormat(data.dob.date)}</p>
+        <p>{data.gender}</p>
       </Link>
     </li>
   );

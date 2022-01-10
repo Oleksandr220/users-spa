@@ -1,7 +1,10 @@
+$bg-color: #64668c5f;
+$text-color: #1c1c1cd0;
+
 .user-details {
   width: 30%;
   background-color: rgba(100, 102, 140, 0.371);
-  color: rgba(28, 28, 28, 0.816);
+  color: $text-color;
 }
 
 .user-details_image {

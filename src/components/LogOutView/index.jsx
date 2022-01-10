@@ -3,8 +3,10 @@ import './LogOutView.scss';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/authReducer/actions';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function LogOutView() {
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -16,7 +18,7 @@ export default function LogOutView() {
   return (
     <div className={'home'}>
       <Button mix={'button'} onClick={handleClick}>
-        Log out
+        <Trans i18nKey="description.part5">Log out</Trans>
       </Button>
     </div>
   );

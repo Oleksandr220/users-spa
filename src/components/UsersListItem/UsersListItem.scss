@@ -1,8 +1,11 @@
+$bg-color: #64668c5f;
+$text-color: #1c1c1cd0;
+
 .user-wrapper {
   display: block;
   width: 100%;
   text-align: center;
-  background-color: rgba(100, 102, 140, 0.371);
+  background-color: $bg-color;
   margin-bottom: 25px;
   margin-right: 25px;
 }
@@ -27,5 +30,5 @@
 
 .user-info {
   text-decoration: none;
-  color: rgba(28, 28, 28, 0.816);
+  color: $text-color;
 }

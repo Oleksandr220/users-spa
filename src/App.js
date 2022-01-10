@@ -3,6 +3,14 @@ import { useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { authSelector } from './redux/authReducer/selectors';
 import Spinner from './components/Spinner';
+import {
+  LOGIN_ROUTE,
+  USERS_ROUTE,
+  INFO_ROUTE,
+  USER_ID_ROUTE,
+  LOGOUT_ROUTE,
+} from './constants/routes';
+import './services/i18n';
 
 const LoginView = React.lazy(() => import('./components/LoginView'));
 const HomeView = React.lazy(() => import('./components/HomeView'));
@@ -19,13 +27,21 @@ function App() {
         <Suspense fallback={<Spinner />}>
           <Routes>
             {!authentication ? (
-              <Route path="/login" index element={<LoginView />} />
+              <Route
+                path={LOGIN_ROUTE}
+                index
+                element={
+                  <>
+                    <LoginView />
+                  </>
+                }
+              />
             ) : (
-              <Route exact path="/users" element={<HomeView />}>
-                <Route path="/users" element={<UsersList />} />
-                <Route path="/users/info" element={<UserInfo />} />
-                <Route path="/users/info/:id" element={<UserInfo />} />
-                <Route path="/users/logout" element={<LogOutView />} />
+              <Route path={USERS_ROUTE} element={<HomeView />}>
+                <Route exact path={USERS_ROUTE} element={<UsersList />} />
+                <Route path={INFO_ROUTE} element={<UserInfo />} />
+                <Route path={USER_ID_ROUTE} element={<UserInfo />} />
+                <Route path={LOGOUT_ROUTE} element={<LogOutView />} />
               </Route>
             )}
           </Routes>

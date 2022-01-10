@@ -3,37 +3,34 @@ import { useSelector } from 'react-redux';
 import { usersSelector } from '../../redux/usersReducer/selectors';
 import UserDetails from '../UserDetails';
 import './UserInfo.scss';
+import '../../services/i18n';
+import { USERS_ROUTE } from '../../constants/routes';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function UserInfo() {
+  const { i18n } = useTranslation();
   const { id } = useParams();
   const users = useSelector(usersSelector);
 
   return (
     <>
-      <Link to="/users" className={'info-back'}>
-        Back
+      <Link to={USERS_ROUTE} className={'info-back'}>
+        <Trans i18nKey="description.part2">Back</Trans>
       </Link>
       {id ? (
         <div className={'info-container'}>
           {users &&
             users
               .filter((user) => user.login.uuid === id)
-              .map((user) => (
-                <UserDetails
-                  key={user.login.uuid}
-                  name={user.name}
-                  avatar={user.picture}
-                  birthday={user.dob}
-                  gender={user.gender}
-                  adress={user.location}
-                  phone={user.phone}
-                  registered={user.registered}
-                />
-              ))}
+              .map((user) => <UserDetails user={user} key={user.login.uuid} />)}
         </div>
       ) : (
         <div className={'info-container'}>
-          <h2 className={'info-warning'}>Select a user to see their info</h2>
+          <h2 className={'info-warning'}>
+            <Trans i18nKey="description.part1">
+              Select a user to see their info
+            </Trans>
+          </h2>
         </div>
       )}
     </>

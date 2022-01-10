@@ -1,14 +1,17 @@
 $btn-bgcolor: #4d81c9;
 $btn-color: #ffffff;
 
-.button {
-  background-color: $btn-bgcolor;
+.lng-btn {
+  font-weight: 400;
   border: none;
   border-radius: 8px;
-  color: $btn-color;
-  padding: 15px 32px;
+  padding: 4px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.active {
+  font-weight: 700;
 }

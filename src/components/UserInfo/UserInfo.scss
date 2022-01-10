@@ -1,3 +1,7 @@
+$text-color: #ff0000;
+$btn-bgcolor: #4d81c9;
+$btn-color: #ffffff;
+
 .info-container {
   display: flex;
   justify-content: center;
@@ -6,16 +10,18 @@
 }
 
 .info-warning {
-  color: red;
+  color: $text-color;
   font-size: 36px;
 }
 
 .info-back {
+  margin-top: 10px;
   margin-left: 40px;
-  background-color: #4d81c9; /* Green */
+  margin-right: 20px;
+  background-color: $btn-bgcolor;
   border: none;
   border-radius: 8px;
-  color: white;
+  color: $btn-color;
   padding: 8px 14px;
   text-align: center;
   text-decoration: none;

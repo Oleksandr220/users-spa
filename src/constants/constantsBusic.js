@@ -1,3 +1,3 @@
-const busicURL = 'https://randomuser.me/api/?results=20'
+const busicURL = 'https://randomuser.me/api/?results';
 
-export { busicURL }
+export { busicURL };
