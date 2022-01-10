@@ -10,7 +10,7 @@ export default function UserInfo() {
 
   return (
     <>
-      <Link to="/users/list" className={'info-back'}>
+      <Link to="/users" className={'info-back'}>
         Back
       </Link>
       {id ? (

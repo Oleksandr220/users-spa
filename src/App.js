@@ -21,8 +21,8 @@ function App() {
             {!authentication ? (
               <Route path="/login" index element={<LoginView />} />
             ) : (
-              <Route path="/users" element={<HomeView />}>
-                <Route path="/users/list" element={<UsersList />} />
+              <Route exact path="/users" element={<HomeView />}>
+                <Route path="/users" element={<UsersList />} />
                 <Route path="/users/info" element={<UserInfo />} />
                 <Route path="/users/info/:id" element={<UserInfo />} />
                 <Route path="/users/logout" element={<LogOutView />} />

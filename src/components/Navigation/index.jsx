@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <nav className={'nav'}>
       <NavLink
-        to="/users/list"
+        to="/users"
         className={({ isActive }) =>
           isActive ? 'nav-link active' : 'nav-link'
         }
