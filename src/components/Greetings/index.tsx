@@ -1,5 +1,6 @@
 import '../../services/i18n';
 import { Trans, useTranslation } from 'react-i18next';
+import React from 'react';
 
 export default function Greetings() {
   const { i18n } = useTranslation();

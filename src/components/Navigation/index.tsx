@@ -4,7 +4,7 @@ import {
   INFO_ROUTE,
   LOGOUT_ROUTE,
   USERS_LIST,
-} from '../../constants/routes.js';
+} from '../../constants/routes';
 import LangButton from '../LangButton';
 import { Trans, useTranslation } from 'react-i18next';
 

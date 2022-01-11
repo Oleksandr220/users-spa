@@ -1,5 +1,12 @@
 import IconsSVG from './icons.svg';
 
+type Props = {
+  name: string;
+  color?: string;
+  size?: number;
+  className?: string;
+}
+
 export default function Icon({ name, color, size, className }) {
   return (
     <svg

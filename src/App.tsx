@@ -31,7 +31,6 @@ function App() {
             {!authentication ? (
               <Route
                 path={LOGIN_ROUTE}
-                index
                 element={
                   <>
                     <LoginView />

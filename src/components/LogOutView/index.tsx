@@ -1,24 +1,24 @@
 import Button from '../Button';
-import './LoginView.scss';
+import './LogOutView.scss';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logIn } from '../../redux/authReducer/actions';
+import { logOut } from '../../redux/authReducer/actions';
 import { Trans, useTranslation } from 'react-i18next';
 
-export default function LoginView() {
+export default function LogOutView() {
   const { i18n } = useTranslation();
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(logIn(true));
-    navigate('/users');
+    dispatch(logOut(false));
+    navigate('/login');
   };
 
   return (
     <div className={'home'}>
-      <Button mix={'button'} onClick={handleClick}>
-        <Trans i18nKey="description.part6" />
+      <Button onClick={handleClick}>
+        <Trans i18nKey="description.part5" />
       </Button>
     </div>
   );
