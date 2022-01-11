@@ -19,7 +19,7 @@ export default function Navigation() {
             isActive ? 'nav-link active' : 'nav-link'
           }
         >
-          <Trans i18nKey="description.part3">Users</Trans>
+          <Trans i18nKey="description.part3" />
         </NavLink>
         <NavLink
           to={INFO_ROUTE}
@@ -27,7 +27,7 @@ export default function Navigation() {
             isActive ? 'nav-link active' : 'nav-link'
           }
         >
-          <Trans i18nKey="description.part4">Users Info</Trans>
+          <Trans i18nKey="description.part4" />
         </NavLink>
         <NavLink
           to={LOGOUT_ROUTE}
@@ -35,7 +35,7 @@ export default function Navigation() {
             isActive ? 'nav-link active' : 'nav-link'
           }
         >
-          <Trans i18nKey="description.part5">Log Out</Trans>
+          <Trans i18nKey="description.part5" />
         </NavLink>
       </nav>
       <div className="info-btns">

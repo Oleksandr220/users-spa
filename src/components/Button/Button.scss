@@ -1,5 +1,4 @@
-$btn-bgcolor: #4d81c9;
-$btn-color: #ffffff;
+@import '../../sass/variables.scss';
 
 .button {
   background-color: $btn-bgcolor;

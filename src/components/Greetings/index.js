@@ -6,9 +6,7 @@ export default function Greetings() {
 
   return (
     <h1 className={'home-title'}>
-      <Trans i18nKey="description.part7">
-        Welcome to single page application
-      </Trans>
+      <Trans i18nKey="description.part7" />
     </h1>
   );
 }

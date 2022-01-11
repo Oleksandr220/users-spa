@@ -18,7 +18,7 @@ export default function LogOutView() {
   return (
     <div className={'home'}>
       <Button mix={'button'} onClick={handleClick}>
-        <Trans i18nKey="description.part5">Log out</Trans>
+        <Trans i18nKey="description.part5" />
       </Button>
     </div>
   );

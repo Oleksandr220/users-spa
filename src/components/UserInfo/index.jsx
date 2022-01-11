@@ -15,7 +15,7 @@ export default function UserInfo() {
   return (
     <>
       <Link to={USERS_LIST} className={'info-back'}>
-        <Trans i18nKey="description.part2">Back</Trans>
+        <Trans i18nKey="description.part2" />
       </Link>
       {id ? (
         <div className={'info-container'}>
@@ -27,9 +27,7 @@ export default function UserInfo() {
       ) : (
         <div className={'info-container'}>
           <h2 className={'info-warning'}>
-            <Trans i18nKey="description.part1">
-              Select a user to see their info
-            </Trans>
+            <Trans i18nKey="description.part1" />
           </h2>
         </div>
       )}

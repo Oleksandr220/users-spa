@@ -1,5 +1,4 @@
-$btn-bgcolor: #4d81c9;
-$btn-color: #ffffff;
+@import '../../sass/variables.scss';
 
 .lng-btn {
   font-weight: 400;
@@ -14,4 +13,10 @@ $btn-color: #ffffff;
 
 .active {
   font-weight: 700;
+}
+
+.lng-btn:hover {
+  cursor: pointer;
+  background-color: $btn-bgcolor;
+  color: $btn-color;
 }

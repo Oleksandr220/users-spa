@@ -48,7 +48,7 @@ export default function UsersList() {
     }
   };
 
-  const memoList = useMemo(() =>
+  const usersList = useMemo(() =>
     users.map(
       (user) => {
         return <UserListItem key={user.login.uuid} data={user} />;
@@ -57,5 +57,5 @@ export default function UsersList() {
     )
   );
 
-  return <ul className={'users'}>{users && memoList}</ul>;
+  return <ul className={'users'}>{users && usersList}</ul>;
 }

@@ -1,9 +1,8 @@
-$bg-color: #64668c5f;
-$text-color: #1c1c1cd0;
+@import '../../sass/variables.scss';
 
 .user-details {
   width: 30%;
-  background-color: rgba(100, 102, 140, 0.371);
+  background-color: bg-color;
   color: $text-color;
 }
 

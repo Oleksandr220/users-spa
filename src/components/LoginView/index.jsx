@@ -18,7 +18,7 @@ export default function LoginView() {
   return (
     <div className={'home'}>
       <Button mix={'button'} onClick={handleClick}>
-        <Trans i18nKey="description.part6"> Log in</Trans>
+        <Trans i18nKey="description.part6" />
       </Button>
     </div>
   );

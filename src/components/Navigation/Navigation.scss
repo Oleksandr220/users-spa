@@ -1,15 +1,10 @@
-$bg-color: #f8f7f5;
-$border-color: #000000;
-$text-color: #2b2a2a;
-$text-hover-color: #ffffff;
-$btn-bgcolor: #4d81c9;
-$active-color: #ff0000;
+@import '../../sass/variables.scss';
 
 .nav {
   margin-top: 25px;
   display: flex;
   justify-content: center;
-  background-color: $bg-color;
+  background-color: $bg-color-nav;
 }
 
 .nav-link {
@@ -20,7 +15,7 @@ $active-color: #ff0000;
   border: solid 1px $border-color;
   border-radius: 20px;
   color: $text-color;
-  background-color: $bg-color;
+  background-color: $bg-color-nav;
 }
 
 .nav-link:hover {
