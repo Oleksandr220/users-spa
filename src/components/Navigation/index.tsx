@@ -1,3 +1,4 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 import {
@@ -39,7 +40,7 @@ export default function Navigation() {
         </NavLink>
       </nav>
       <div className="info-btns">
-        <LangButton />
+      <LangButton />
       </div>
     </div>
   );
