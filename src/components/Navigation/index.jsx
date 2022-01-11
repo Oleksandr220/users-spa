@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 import {
-  USERS_ROUTE,
   INFO_ROUTE,
   LOGOUT_ROUTE,
+  USERS_LIST,
 } from '../../constants/routes.js';
 import LangButton from '../LangButton';
 import { Trans, useTranslation } from 'react-i18next';
@@ -14,7 +14,7 @@ export default function Navigation() {
     <div className={'nav-container'}>
       <nav className={'nav'}>
         <NavLink
-          to={USERS_ROUTE}
+          to={USERS_LIST}
           className={({ isActive }) =>
             isActive ? 'nav-link active' : 'nav-link'
           }

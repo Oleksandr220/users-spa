@@ -9,6 +9,7 @@ import {
   INFO_ROUTE,
   USER_ID_ROUTE,
   LOGOUT_ROUTE,
+  USERS_LIST,
 } from './constants/routes';
 import './services/i18n';
 
@@ -17,6 +18,7 @@ const HomeView = React.lazy(() => import('./components/HomeView'));
 const LogOutView = React.lazy(() => import('./components/LogOutView'));
 const UsersList = React.lazy(() => import('./components/UsersList'));
 const UserInfo = React.lazy(() => import('./components/UserInfo'));
+const Greetings = React.lazy(() => import('./components/Greetings'));
 
 function App() {
   const authentication = useSelector(authSelector);
@@ -38,7 +40,8 @@ function App() {
               />
             ) : (
               <Route path={USERS_ROUTE} element={<HomeView />}>
-                <Route exact path={USERS_ROUTE} element={<UsersList />} />
+                <Route path={USERS_ROUTE} element={<Greetings />} />
+                <Route path={USERS_LIST} element={<UsersList />} />
                 <Route path={INFO_ROUTE} element={<UserInfo />} />
                 <Route path={USER_ID_ROUTE} element={<UserInfo />} />
                 <Route path={LOGOUT_ROUTE} element={<LogOutView />} />

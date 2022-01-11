@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 import './LangButton.scss';
 
 const btnLngs = {
-  en: { nativeName: 'English' },
   ru: { nativeName: 'Russian' },
+  en: { nativeName: 'English' },
 };
 
 export default function LangButton(click) {

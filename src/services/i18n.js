@@ -11,7 +11,8 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    debug: true,
+    lng: 'en',
+    debug: false,
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
@@ -38,7 +39,7 @@ i18n
             part3: 'Пользователи',
             part4: 'Информация о пользователе',
             part5: 'Выйти',
-            part6: 'Ввойти',
+            part6: 'Войти',
           },
         },
       },

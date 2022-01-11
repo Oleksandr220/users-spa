@@ -4,7 +4,7 @@ import { usersSelector } from '../../redux/usersReducer/selectors';
 import UserDetails from '../UserDetails';
 import './UserInfo.scss';
 import '../../services/i18n';
-import { USERS_ROUTE } from '../../constants/routes';
+import { USERS_LIST } from '../../constants/routes';
 import { Trans, useTranslation } from 'react-i18next';
 
 export default function UserInfo() {
@@ -14,7 +14,7 @@ export default function UserInfo() {
 
   return (
     <>
-      <Link to={USERS_ROUTE} className={'info-back'}>
+      <Link to={USERS_LIST} className={'info-back'}>
         <Trans i18nKey="description.part2">Back</Trans>
       </Link>
       {id ? (
