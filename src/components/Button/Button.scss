@@ -1,0 +1,13 @@
+@import '../../sass/variables.scss';
+
+.button {
+  background-color: $btn-bgcolor;
+  border: none;
+  border-radius: 8px;
+  color: $btn-color;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

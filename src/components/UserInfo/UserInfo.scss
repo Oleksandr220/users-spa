@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.info-warning {
+  color: $text-color;
+  font-size: 36px;
+}
+
+.info-back {
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 20px;
+  background-color: $btn-bgcolor;
+  border: none;
+  border-radius: 8px;
+  color: $btn-color;
+  padding: 8px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}

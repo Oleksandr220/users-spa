@@ -1,0 +1,29 @@
+@import '../../sass/variables.scss';
+
+.user-details {
+  width: 30%;
+  background-color: bg-color;
+  color: $text-color;
+}
+
+.user-details_image {
+  width: 300px;
+}
+
+@media only screen and (min-width: 450px) {
+  .user-details_image {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .user-details_image {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .user-details_image {
+    width: 80%;
+  }
+}
