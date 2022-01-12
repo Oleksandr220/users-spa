@@ -1,10 +1,11 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import './Navigation.scss';
 import {
   INFO_ROUTE,
   LOGOUT_ROUTE,
   USERS_LIST,
-} from '../../constants/routes.js';
+} from '../../constants/routes';
 import LangButton from '../LangButton';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -39,7 +40,7 @@ export default function Navigation() {
         </NavLink>
       </nav>
       <div className="info-btns">
-        <LangButton />
+      <LangButton />
       </div>
     </div>
   );

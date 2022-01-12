@@ -1,3 +1,4 @@
+import React from 'react'
 import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { usersSelector } from '../../redux/usersReducer/selectors';
@@ -6,6 +7,7 @@ import './UserInfo.scss';
 import '../../services/i18n';
 import { USERS_LIST } from '../../constants/routes';
 import { Trans, useTranslation } from 'react-i18next';
+import {IUser} from '../..//types'
 
 export default function UserInfo() {
   const { i18n } = useTranslation();
@@ -21,8 +23,8 @@ export default function UserInfo() {
         <div className={'info-container'}>
           {users &&
             users
-              .filter((user) => user.login.uuid === id)
-              .map((user) => <UserDetails user={user} key={user.login.uuid} />)}
+              .filter((user: IUser) => user.login.uuid === id)
+            .map((user: any) => <UserDetails userData={user} key={user.login.uuid} />)}
         </div>
       ) : (
         <div className={'info-container'}>

@@ -1,3 +1,4 @@
+import React  from 'react'
 import { useSelector } from 'react-redux';
 import { useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
@@ -9,10 +10,11 @@ import {
 } from '../../redux/usersReducer/selectors';
 import { authSelector } from '../../redux/authReducer/selectors';
 import './UsersList.scss';
+import {IUser} from '../../types'
 
 export default function UsersList() {
   const dispatch = useDispatch();
-  const users = useSelector(usersSelector);
+  const users: IUser[] = useSelector(usersSelector);
   const loading = useSelector(loadingSelector);
   const authentication = useSelector(authSelector);
 
@@ -23,7 +25,7 @@ export default function UsersList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
+  useEffect((): any => {
     if (loading) {
       dispatch({ type: ADD_USERS_ASYNC, data: 20 });
     }
@@ -38,7 +40,7 @@ export default function UsersList() {
     };
   }, [loading]);
 
-  const scrollHandler = (event) => {
+  const scrollHandler = (event: any) => {
     if (
       event.target.documentElement.scrollHeight -
         (event.target.documentElement.scrollTop + window.innerHeight) <
@@ -50,11 +52,11 @@ export default function UsersList() {
 
   const usersList = useMemo(() =>
     users.map(
-      (user) => {
-        return <UserListItem key={user.login.uuid} data={user} />;
-      },
-      [users]
-    )
+      (user: IUser) => {
+        return <UserListItem key={user.login.uuid} data={user} />
+      }
+    ),
+    [users]
   );
 
   return <ul className={'users'}>{users && usersList}</ul>;
