@@ -1,2 +1,4 @@
-export const usersSelector = (state) => state.usersReducer.users;
-export const loadingSelector = (state) => state.usersReducer.loading;
+import {IStore} from '../../types'
+
+export const usersSelector = (state:IStore) => state.usersReducer.users;
+export const loadingSelector = (state:IStore) => state.usersReducer.loading;

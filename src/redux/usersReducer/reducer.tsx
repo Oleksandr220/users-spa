@@ -1,11 +1,21 @@
 import { ADD_USERS, SET_LOADING } from './actions';
+import {User} from '../../types'
+
+interface Action{
+  type: any;
+  data: []
+}
+interface IState {
+  users: User[] | [];
+  loading: boolean;
+}
 
 const initialState = {
   users: [],
   loading: true,
 };
 
-function reduser(state = initialState, action) {
+function reduser(state: IState = initialState, action: Action) {
   switch (action.type) {
     case ADD_USERS:
       return { ...state, users: [...state.users, ...action.data] };

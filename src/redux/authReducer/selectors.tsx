@@ -1,1 +1,7 @@
-export const authSelector = (state) => state.authReducer.auth;
+interface State{
+    authReducer: {
+        auth: String;
+    };
+}
+
+export const authSelector = (state: State) => state.authReducer.auth;

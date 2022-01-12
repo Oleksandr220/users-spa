@@ -1,5 +1,9 @@
-const changeDateFormat = (date) => {
-  const options = {
+interface IOptions{
+    [key:string]: string
+}
+
+const changeDateFormat = (date: Date) => {
+  const options: IOptions = {
     year: 'numeric',
     month: 'numeric',
     day: 'numeric',

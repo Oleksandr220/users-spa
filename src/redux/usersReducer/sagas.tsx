@@ -6,7 +6,7 @@ export default function* watchUsers() {
   yield takeLeading(ADD_USERS_ASYNC, addUserSaga);
 }
 
-function* addUserSaga(action) {
+function* addUserSaga(action:any):any {
   yield put(setLoading(true));
   const data = yield call(getRandomaizer, action.data);
   yield put(addUser(data));

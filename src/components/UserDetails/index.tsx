@@ -1,7 +1,8 @@
+import React  from 'react'
 import changeDateFormat from '../../services/changeDateFormat';
 import './UserDetails.scss';
 
-export default function UserDetails({ user }) {
+export default function UserDetails ({ user }: any) {
   return (
     <div className={'user-details'}>
       <p>{`Name: ${user.name.first} ${user.name.last}`}</p>
