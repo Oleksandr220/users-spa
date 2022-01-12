@@ -32,9 +32,7 @@ function App() {
               <Route
                 path={LOGIN_ROUTE}
                 element={
-                  <>
                     <LoginView />
-                  </>
                 }
               />
             ) : (

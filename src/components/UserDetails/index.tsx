@@ -1,8 +1,14 @@
 import React  from 'react'
 import changeDateFormat from '../../services/changeDateFormat';
 import './UserDetails.scss';
+import { IUser } from '../../types'
 
-export default function UserDetails ({ user }: any) {
+interface IProps{
+  userData: IUser;
+}
+
+export default function UserDetails({ userData }: IProps) {
+  const {user} = userData
   return (
     <div className={'user-details'}>
       <p>{`Name: ${user.name.first} ${user.name.last}`}</p>

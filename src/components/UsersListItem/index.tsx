@@ -9,11 +9,7 @@ export default function UsersListItem({ data }: any) {
   return (
     <li className={'user-wrapper'}>
       <Link to={`${INFO_ROUTE}/${data.login.uuid}`} className={'user-info'}>
-        <p>
-          <span>{data.name.first}</span>
-          <span> </span>
-          <span>{data.name.last}</span>
-        </p>
+          <p>{`Name: ${data.name.first} ${data.name.last}`}</p>
         <img src={data.picture.medium} alt="avatar" />
         <p>Birthday: {changeDateFormat(data.dob.date)}</p>
         <p>{data.gender}</p>

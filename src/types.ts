@@ -1,32 +1,36 @@
-interface User {
+interface IUser {
 user: {
     name: {
-      first?: String;
-      last?: String;
+      first: String;
+      last: String;
     };
-    picture: {
+  picture: {
+    medium?: string;
       large?: string;
     };
     gender: String;
     location: {
-      country?: String;
-      city?: String;
+      country: String;
+      city: String;
       street: {
-        name?: String;
-        number?: Number;
+        name: String;
+        number: Number;
       }
     };
     dob: {
-      date: String;
+      date: Date;
     };
     phone: Number;
     registered: {
-      date?: String;
+      date: Date;
     };
-  };
+    login: {
+      uuid: string;
+    }
+};
   login: {
-    uuid: string;
-  }
+      uuid: string;
+    }
 }
 
 interface IStore {
@@ -34,9 +38,9 @@ interface IStore {
     auth: Boolean;
   };
   usersReducer: {
-    users: User[];
+    users: IUser[];
     loading: Boolean;
   }
 }
 
-export {User, IStore}
+export {IUser, IStore}

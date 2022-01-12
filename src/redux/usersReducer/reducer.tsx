@@ -1,12 +1,11 @@
 import { ADD_USERS, SET_LOADING } from './actions';
-import {User} from '../../types'
-
+import {IUser} from '../../types'
 interface Action{
-  type: any;
-  data: []
+  type: String;
+  data: IUser[] | []
 }
 interface IState {
-  users: User[] | [];
+  users: IUser[] | [];
   loading: boolean;
 }
 

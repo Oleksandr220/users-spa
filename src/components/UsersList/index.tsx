@@ -10,11 +10,11 @@ import {
 } from '../../redux/usersReducer/selectors';
 import { authSelector } from '../../redux/authReducer/selectors';
 import './UsersList.scss';
-import {User} from '../../types'
+import {IUser} from '../../types'
 
 export default function UsersList() {
   const dispatch = useDispatch();
-  const users: User[] = useSelector(usersSelector);
+  const users: IUser[] = useSelector(usersSelector);
   const loading = useSelector(loadingSelector);
   const authentication = useSelector(authSelector);
 
@@ -52,7 +52,7 @@ export default function UsersList() {
 
   const usersList = useMemo(() =>
     users.map(
-      (user: User) => {
+      (user: IUser) => {
         return <UserListItem key={user.login.uuid} data={user} />
       }
     ),

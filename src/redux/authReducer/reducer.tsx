@@ -1,7 +1,7 @@
 import { LOG_IN, LOG_OUT } from './actions';
 
 interface IAction{
-  type: any;
+  type: String;
   data: {
   }
 }

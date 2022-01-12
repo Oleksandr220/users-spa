@@ -7,37 +7,7 @@ import './UserInfo.scss';
 import '../../services/i18n';
 import { USERS_LIST } from '../../constants/routes';
 import { Trans, useTranslation } from 'react-i18next';
-
-interface IUser {
-user: {
-    name: {
-      first?: String;
-      last?: String;
-    };
-    picture: {
-      large?: string;
-    };
-    gender: String;
-    location: {
-      country?: String;
-      city?: String;
-      street: {
-        name?: String;
-        number?: Number;
-      }
-    };
-    dob: {
-      date: String;
-    };
-    phone: Number;
-    registered: {
-      date?: String;
-    };
-  };
-  login: {
-    uuid: string;
-  }
-}
+import {IUser} from '../..//types'
 
 export default function UserInfo() {
   const { i18n } = useTranslation();
@@ -54,7 +24,7 @@ export default function UserInfo() {
           {users &&
             users
               .filter((user: IUser) => user.login.uuid === id)
-              .map((user: IUser) => <UserDetails user={user} key={user.login.uuid} />)}
+              .map((user: IUser) => <UserDetails userData={user} key={user.login.uuid} />)}
         </div>
       ) : (
         <div className={'info-container'}>

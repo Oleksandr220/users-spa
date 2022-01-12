@@ -1,6 +1,6 @@
 interface State{
     authReducer: {
-        auth: String;
+        auth: Boolean;
     };
 }
 
