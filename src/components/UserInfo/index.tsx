@@ -13,6 +13,7 @@ export default function UserInfo() {
   const { i18n } = useTranslation();
   const { id } = useParams();
   const users = useSelector(usersSelector);
+  console.log(id)
 
   return (
     <>
@@ -24,7 +25,7 @@ export default function UserInfo() {
           {users &&
             users
               .filter((user: IUser) => user.login.uuid === id)
-              .map((user: IUser) => <UserDetails userData={user} key={user.login.uuid} />)}
+            .map((user: any) => <UserDetails userData={user} key={user.login.uuid} />)}
         </div>
       ) : (
         <div className={'info-container'}>

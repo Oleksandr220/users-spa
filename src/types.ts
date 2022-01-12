@@ -33,6 +33,32 @@ user: {
     }
 }
 
+interface IDetails{
+  name: {
+    first: String;
+    last: String;
+  };
+  picture: {
+    medium?: string;
+      large?: string;
+  };
+  dob: {
+      date: Date;
+  };
+  location: {
+      country: String;
+      city: String;
+      street: {
+        name: String;
+        number: Number;
+      }
+  };
+  phone: Number;
+    registered: {
+      date: Date;
+    };
+  gender: String;
+}
 interface IStore {
   authReducer: {
     auth: Boolean;
@@ -43,4 +69,4 @@ interface IStore {
   }
 }
 
-export {IUser, IStore}
+export {IUser, IDetails, IStore}
