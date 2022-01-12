@@ -11,7 +11,7 @@ export default function UsersListItem({ data }: any) {
       <Link to={`${INFO_ROUTE}/${data.login.uuid}`} className={'user-info'}>
           <p>{`Name: ${data.name.first} ${data.name.last}`}</p>
         <img src={data.picture.medium} alt="avatar" />
-        <p>Birthday: {changeDateFormat(data.dob.date)}</p>
+        <p>{`Birthday: ${changeDateFormat(data.dob.date)}`}</p>
         <p>{data.gender}</p>
       </Link>
     </li>

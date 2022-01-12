@@ -8,7 +8,6 @@ interface IProps{
 }
 
 export default function UserDetails({ userData }: IProps) {
-  console.log(userData)
   return (
     <div className={'user-details'}>
       <p>{`Name: ${userData.name.first} ${userData.name.last}`}</p>
@@ -22,9 +21,7 @@ export default function UserDetails({ userData }: IProps) {
       <p>
         Country: {userData.location.country}, City: {userData.location.city}
       </p>
-      <p>
-        Street: {userData.location.street.name}, Number:{' '}
-        {userData.location.street.number}
+      <p>{`Street: ${userData.location.street.name}, Number: ${userData.location.street.number}`}
       </p>
       <p>Phone number: {userData.phone}</p>
       <p>Registered date: {changeDateFormat(userData.registered.date)}</p>

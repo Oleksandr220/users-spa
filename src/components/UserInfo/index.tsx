@@ -13,7 +13,6 @@ export default function UserInfo() {
   const { i18n } = useTranslation();
   const { id } = useParams();
   const users = useSelector(usersSelector);
-  console.log(id)
 
   return (
     <>
